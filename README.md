@@ -3,34 +3,24 @@ Real-time sales analytics pipeline using Java, Spring Boot, Kafka, PostgreSQL, D
 Run:
 docker-compose up -d
 mvn spring-boot:run
-Real-Time Sales Analytics Pipeline (Java, Kafka, Spring Boot)
-It demonstrates how real-time event streams are processed and persisted using a scalable backend architecture.
+Summary
 
-System Arcitechture:
+This project simulates a real-world event streaming architecture where sales events are generated, streamed through Kafka, processed by a consumer service, and persisted in PostgreSQL for analytics.
 
-A[Sales Event Producer<br/>Spring Boot Service] --> B[Apache Kafka<br/>sales-events topic]
+It reflects patterns used in modern distributed systems for e-commerce, fintech, and data platforms.
 
-B --> C[Consumer Service<br/>Spring Boot]
+Architecture
+Producer (Spring Boot)
+        |
+        v
+Apache Kafka (Event Bus)
+        |
+        v
+Consumer (Spring Boot)
+        |
+        v
+PostgreSQL (Analytics Store)
 
-C --> D[PostgreSQL Database<br/>Persistent Storage]
-
-D --> E[Analytics / Reporting Layer]
-Architecture Overview
-
-The system is built around an event-driven pipeline:
-
-The Producer Service publishes sales events to Kafka
-Kafka acts as the central event streaming backbone
-The Consumer Service processes and transforms events
-PostgreSQL stores structured, queryable sales data
-The system is designed for horizontal scalability and service isolation
-Tech Stack
-Java 17
-Spring Boot
-Apache Kafka
-PostgreSQL
-Docker / Docker Compose
-Maven
 Project Structure
 production-java-data-pipeline/
 ├── producer-service/      # Event producer (Kafka publisher)
