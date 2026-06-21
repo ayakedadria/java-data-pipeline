@@ -5,9 +5,7 @@ docker-compose up -d
 mvn spring-boot:run
 Summary
 
-This project simulates a real-world event streaming architecture where sales events are generated, streamed through Kafka, processed by a consumer service, and persisted in PostgreSQL for analytics.
-
-It reflects patterns used in modern distributed systems for e-commerce, fintech, and data platforms.
+This project simulates a real-world event streaming architecture where sales events are generated, streamed through Kafka, processed by a consumer service, and persisted in PostgreSQL for analytics,reflecting patterns used in modern distributed systems for e-commerce, fintech, and data platforms.
 
 Architecture
 Producer (Spring Boot)
